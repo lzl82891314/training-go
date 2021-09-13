@@ -1,4 +1,4 @@
-package draftbook
+package main
 
 import (
 	"fmt"
