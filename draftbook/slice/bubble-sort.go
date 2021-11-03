@@ -1,18 +1,17 @@
-package main
+package slice
 
 import (
-	"fmt"
 	"math/rand"
 	"time"
 )
 
-func main() {
-	num := make([]int, 100, 100)
-	InitArray(num)
-	fmt.Println(num)
-	BubbleSort(num)
-	fmt.Println(num)
-}
+//func main() {
+//	num := make([]int, 100, 100)
+//	InitArray(num)
+//	fmt.Println(num)
+//	BubbleSort(num)
+//	fmt.Println(num)
+//}
 
 func BubbleSort(arr []int) {
 	length := len(arr)

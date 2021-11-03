@@ -1,4 +1,4 @@
-package main
+package slice
 
 import (
 	"fmt"
@@ -20,4 +20,21 @@ func main2() {
 	fmt.Println(b)
 	c := math.MaxInt32
 	fmt.Println(c)
+}
+
+// 实现删除
+func RemoveLast(a []int) []int {
+	length := len(a)
+	a = (a)[:length-1]
+	return a
+}
+
+func RemoveIndex(a []int, index int) []int {
+	a = append(a[:index], a[index+1:]...)
+	return a
+}
+
+func RemoveIndexP(a *[]int, index int) *[]int {
+	*a = append((*a)[:index], (*a)[index+1:]...)
+	return a
 }
