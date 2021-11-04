@@ -27,7 +27,7 @@ func NewBookStoreServer(addr string, s store.Store) *BookStoreServer {
 	router.HandleFunc("/book", srv.getAllBookHandler).Methods("GET")
 	router.HandleFunc("/book", srv.createBookHandler).Methods("POST")
 	router.HandleFunc("/book/{id}", srv.getBookHandler).Methods("GET")
-	router.HandleFunc("/book/{id}", srv.getBookHandler).Methods("POST")
+	router.HandleFunc("/book/{id}", srv.updateBookHandler).Methods("POST")
 	router.HandleFunc("/book/{id}", srv.deleteBookHandler).Methods("DELETE")
 
 	srv.srv.Handler = middleware.Logging(middleware.Validating(router))
